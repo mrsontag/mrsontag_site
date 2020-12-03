@@ -1,0 +1,14 @@
+
+.linkicon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.container {
+    position: absolute;
+    top: 0px;
+    left: calc(100% - 50px);
+    width: 150px;
+    height: 150px;
+}

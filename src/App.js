@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import yosemiteimg from './images/Yosemite.jpg';
+import NavTable from "./components/navtable";
+import { Router } from "@reach/router";
+import Passions from "./views/passions";
+import ContactWidget from './components/contactwidget';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img className="FillWidth" src={yosemiteimg} alt="Yosemite National Park - Half Dome from Four Mile Trail" />
+      <div className="container"> 
+        <Router>
+          <NavTable path="/"/>
+          <Passions path="/passions" />
+        </Router>
+        <ContactWidget />
+      </div>
     </div>
   );
 }
