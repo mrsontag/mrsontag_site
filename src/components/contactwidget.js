@@ -7,13 +7,13 @@ import linkedin from "../images/linkedin.png";
 const LogoLink = props => {
     const radian = props.angle / 360 * 2 * Math.PI;
 
-    const left = props.radius - Math.sin(radian) * props.radius 
-    const top = props.radius - Math.cos(radian) * props.radius 
+    const left = props.radius - Math.sin(radian) * props.radius + 10
+    const top = props.radius - Math.cos(radian) * props.radius  + 10
 
     return( 
         <div className={styles.linkicon} style={{
             top: top +"px",
-            left: left+"px",
+            left: left + "px",
         }}>
             <a href={props.link} target="_blank">
                 <div name={props.name} style={{textAlign:"center"}}>

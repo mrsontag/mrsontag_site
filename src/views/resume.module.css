@@ -1,0 +1,25 @@
+
+
+.resume a {
+    margin-left: 45px;
+}
+.resume a:link {
+    color: lightblue;
+}
+
+.resume a:active {
+    color: lightblue;
+}
+
+.resume a:hover {
+    color: lightblue;
+}
+
+.resume a:visited {
+    color: lightblue;
+}
+
+.resume li {
+    margin-bottom: 5px;
+}
+

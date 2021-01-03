@@ -13,6 +13,7 @@ const NavCell = props => {
     })
     
     const onClick = () => {
+        //evaluate expand behavior in reverse to avoid latency in setState on expand
         setStyletext({
             ...styletext,
             color:  expand ? props.fontColor : "white",
@@ -24,8 +25,6 @@ const NavCell = props => {
         
     }
 
-
-
     return (
         <div className={`${styles.navcell} ${expand ? styles.navcell_expanded : styles.navcell_small}`} style={styletext} onClick={onClick}>
             <div className={`${styles.heading} ${expand ? styles.heading_transparent : null}`}>
@@ -34,6 +33,7 @@ const NavCell = props => {
             <div className={`${styles.content} ${!expand ? styles.content_transparent : null}`}>
                 {props.children}
             </div>
+            <div className={`${expand ? styles.background_clicker : styles.background_clicker_hide}`} onClick={onClick}></div>
         </div>
     )
 }
